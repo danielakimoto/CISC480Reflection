@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - Restaurant Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand">Restaurant Tracker</span>
+        <div class="ms-auto">
+          <a href="/logout" class="btn btn-outline-light">Logout</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="text-center mb-4">
+        <h2>Welcome, {{ username }}!</h2>
+        <p class="text-muted">What would you like to do today?</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <a href="/add_restaurant_form" class="text-decoration-none">
+            <div class="card text-white bg-success h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Add Restaurant</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="/add_meal_form" class="text-decoration-none">
+            <div class="card text-white bg-primary h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Add Meal</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="/add_rating_form" class="text-decoration-none">
+            <div class="card text-white bg-warning h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Add Rating</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="/visited_restaurants" class="text-decoration-none">
+            <div class="card text-white bg-info h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Visited Restaurants</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="/favorite_restaurants" class="text-decoration-none">
+            <div class="card text-white bg-danger h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Favorite Restaurants</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="/suggestions" class="text-decoration-none">
+            <div class="card text-white bg-secondary h-100 shadow">
+              <div class="card-body text-center">
+                <h5 class="card-title">Meal Suggestions</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Reset button AFTER the grid -->
+      <div class="text-center mt-5">
+        <form action="/reset_db" method="POST">
+          <button type="submit" class="btn btn-outline-danger btn-lg">
+            Reset Database
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
