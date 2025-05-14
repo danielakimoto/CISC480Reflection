@@ -1,2 +1,3 @@
-# CISC480Reflection1
-First project for Capstone portfolio
+# CISC480Reflection
+Portfolio for Senior Capstone
+
